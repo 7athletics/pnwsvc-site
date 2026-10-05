@@ -1,0 +1,13 @@
+# Old Wix URLs -> new pages (works on Netlify and Cloudflare Pages)
+/team-registration      /tournament-info/   301
+/combine-registration   /recruiting/#combine 301
+/seminar-registration   /recruiting/#seminar 301
+/event-details/*        /recruiting/        301
+/about                  /contact/           301
+/schedules              /past-events/       301
+/schedules-25           /past-events/       301
+/schedules-24           /past-events/       301
+/tournament-info        /tournament-info/   301
+/sponsors               /sponsors/          301
+/faq                    /faq/               301
+/contact                /contact/           301

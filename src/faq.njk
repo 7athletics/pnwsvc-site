@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: FAQ
+permalink: /faq/
+description: Frequently asked questions about the PNW Summer Volleyball Classic, lodging, registration and the recruiting combine.
+eyebrow: FAQ
+heading: Questions, answered
+lede: Can't find it here? Text or call us anytime.
+heroImage: svc-3139-wide.jpg
+heroWash: pink
+heroPos: center top
+---
+{% include "partials/pagehero.njk" %}
+
+<section class="content">
+  <div class="wrap info-layout">
+    <div>
+      {% for g in faq.groups %}
+      <div class="acc-tools">
+        <h2 class="group-h" style="margin:{% if loop.first %}0{% else %}40px 0 0{% endif %}">{{ g.name }}</h2>
+        <button class="linkbtn" type="button" data-acc-all="faq-{{ loop.index }}">Expand all</button>
+      </div>
+      <div class="accordion" id="faq-{{ loop.index }}">
+        {% for i in g.items %}<details><summary>{{ i.q }}</summary><div class="body"><p>{{ i.a | safe }}</p></div></details>{% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <aside class="aside-card">
+      <h3>Still have a question?</h3>
+      <p class="muted">{{ site.contact.phoneNote }}: <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a><br>Email: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+      <a class="btn btn-pink" href="{{ site.registration.url }}" target="_blank" rel="noopener">Register your team</a>
+      <a class="btn btn-ghost" href="/tournament-info/">Tournament info</a>
+    </aside>
+  </div>
+</section>

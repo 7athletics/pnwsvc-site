@@ -1,0 +1,78 @@
+{
+  "groups": [
+    {
+      "name": "The tournament",
+      "items": [
+        {
+          "q": "Are high schools from any state allowed to attend?",
+          "a": "Absolutely. We mainly market to Washington, Oregon and Idaho, but anyone is welcome to come compete."
+        },
+        {
+          "q": "Is this a team camp?",
+          "a": "No, it's a tournament. Each team represents its school and brings its own coaching staff. You get real competition before fall, four divisions to choose from, and recruiting opportunities on top of that."
+        },
+        {
+          "q": "What's the difference between Weekend 1 and Weekend 2?",
+          "a": "Nothing but the dates. Both weekends run the same format, divisions and venue, so pick the one that fits your summer."
+        },
+        {
+          "q": "Are club teams allowed?",
+          "a": "Yes, but high school teams get priority. Club team registration opens February 1."
+        },
+        {
+          "q": "How many matches are we guaranteed?",
+          "a": "Five are guaranteed, and we do our best to give every team more whenever the schedule allows."
+        },
+        {
+          "q": "What is the on-site lodging?",
+          "a": "Sleepover style, and the best for team bonding. Teams get space in the back gym attached to the venue and bring air mattresses, cots and sleeping bags. Showers and bathrooms are provided."
+        },
+        {
+          "q": "Can a business sponsor our team's entry fee?",
+          "a": "Yes. Note that team-fee sponsors aren't guaranteed any tournament marketing benefits. For tournament sponsorship, see our <a href=\"/sponsors/\">Sponsors page</a>."
+        },
+        {
+          "q": "What do I need to get a school PO ready before registration opens?",
+          "a": "Make checks payable to <strong>PNW SVC</strong> with the memo <strong>PNW SVC 2027</strong>. We can send an official quote or invoice on request. Mailing details are on the <a href=\"/tournament-info/#payment\">Tournament Info page</a>."
+        },
+        {
+          "q": "How is the PNW SVC different from other summer tournaments?",
+          "a": "We're more than a tournament. A recruiting combine runs the night before play, a recruiting seminar is led by college coaches from several levels, and the combine is livestreamed so college coaches can watch from anywhere."
+        }
+      ]
+    },
+    {
+      "name": "Recruiting combine & seminar",
+      "items": [
+        {
+          "q": "Can athletes attend the combine or seminar if their school isn't in the tournament?",
+          "a": "Yes. If you don't have a team in the tournament, that doesn't matter to us. We want as many athletes as possible to learn about recruiting and get college exposure."
+        },
+        {
+          "q": "What is a recruiting seminar?",
+          "a": "A session for high school coaches, athletes and parents to learn the recruiting process. College coaches from multiple levels share what they look for, the rules they follow, scholarship information, which recruiting avenues they actually use, and where an athlete should be in the process by grade."
+        },
+        {
+          "q": "What is a recruiting combine?",
+          "a": "An exposure event, usually the night before a big tournament, where high school players show their skills to college coaches. Every player gets the same number of touches, with no favoritism by club or school, and every college coach gets equal access to the players."
+        },
+        {
+          "q": "Is a combine the same as a showcase?",
+          "a": "Basically. We use \"recruiting combine\" because some small, invite-only club events also call themselves showcases."
+        },
+        {
+          "q": "Will the combine be recorded?",
+          "a": "Yes. It's livestreamed for college coaches who can't attend in person, and players get access to the footage afterward for their own recruiting."
+        },
+        {
+          "q": "What's the combine format?",
+          "a": "90 minutes focused on maximum touches: position drills, then group drills. Think of it as an in-person skills video for college coaches. There's no 6-on-6 scrimmage, to reduce injury risk the night before a tournament."
+        },
+        {
+          "q": "Do you measure height, jumps or speed?",
+          "a": "No. The focus is volleyball ability. Physical testing would take far more time, and college coaches are practiced at judging height and jump on sight."
+        }
+      ]
+    }
+  ]
+}

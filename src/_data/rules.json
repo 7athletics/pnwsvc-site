@@ -1,0 +1,105 @@
+{
+  "divisions": [
+    {
+      "name": "Division I",
+      "level": "High-level varsity"
+    },
+    {
+      "name": "Division II",
+      "level": "Mid to lower varsity and high-level JV"
+    },
+    {
+      "name": "Division III",
+      "level": "Mid to lower JV"
+    },
+    {
+      "name": "Division IV",
+      "level": "Lower JV, C-teams and freshman teams"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Match format",
+      "items": [
+        "All matches are best 2 of 3. Sets 1 and 2 go to 25 (cap at 27). A deciding third set goes to 15 (cap at 17).",
+        "Every team is guaranteed a minimum of 5 matches. We add more matches when registration numbers allow.",
+        "Warm-ups start at 7:30am. First matches start at 8:00am.",
+        "Each team gets two 30-second timeouts per set.",
+        "Teams bring their own warm-up balls and ball carts."
+      ]
+    },
+    {
+      "title": "Warm-ups",
+      "items": [
+        "<strong>First two rounds of each wave: 2-4-4.</strong> 2 minutes shared, 4 minutes serving team, 4 minutes receiving team.",
+        "<strong>All later rounds: 1-2-2.</strong> 1 minute shared, 2 minutes serving team, 2 minutes receiving team.",
+        "Serving happens during each team's own court time, not during shared time.",
+        "Both teams may agree to waive warm-ups and start play early."
+      ]
+    },
+    {
+      "title": "Time & punctuality",
+      "items": [
+        "The first matches of the day must start on time.",
+        "For every match after the first match of the day, warm-up time begins as soon as the previous match on that court ends.",
+        "A team that is not present for its warm-up forfeits the first set. If the team does not arrive within 15 minutes, it forfeits the second set and the match."
+      ]
+    },
+    {
+      "title": "Officials & work teams",
+      "items": [
+        "First referees are provided by the tournament.",
+        "Work teams provide 2 line judges, 1 scorekeeper and 1 down official. The down official must be a coach or a very capable player.",
+        "Libero tracker and book are not provided. If you want them, please bring your own."
+      ]
+    },
+    {
+      "title": "Rosters & eligibility",
+      "items": [
+        "Rosters are due to the tournament directors by July 1.",
+        "Maximum 14 players and 2 coaches per team.",
+        "The tournament is reserved for players who are eligible for the upcoming fall high school season.",
+        "NFHS uniform rules do not apply, but players on a team must match and wear numbers that match the roster."
+      ]
+    },
+    {
+      "title": "Rules of play",
+      "items": [
+        "Current-season NFHS volleyball rules apply unless this page says otherwise.",
+        "<a href=\"https://www.nfhs.org/sports-resource-content/volleyball/\" target=\"_blank\" rel=\"noopener\">NFHS volleyball rules and resources ↗</a>"
+      ]
+    },
+    {
+      "title": "Tie-breakers",
+      "items": [
+        "<strong>Two teams tied:</strong> 1) head-to-head result, 2) set percentage, 3) point percentage, 4) coin flip.",
+        "<strong>Three or more teams tied:</strong> 1) set percentage among all matches, 2) point percentage. Once the tie is down to two teams, use the two-team procedure. If teams are still tied, the lowest seeds flip first."
+      ]
+    },
+    {
+      "title": "Conduct & spectators",
+      "items": [
+        "Poor conduct, including repeated arguing of calls, foul language, verbal abuse or physical abuse, will not be tolerated. It can result in loss of a set, loss of a match or ejection from the tournament.",
+        "These rules apply to players, coaches, parents and spectators.",
+        "Spectators of all ages must stay in the court areas in use and may not wander into or play in other spaces."
+      ]
+    },
+    {
+      "title": "Payment & refunds",
+      "items": [
+        "Entry is $500 per team. On-site lodging is $300 per team.",
+        "A non-refundable $150 team deposit is due within 2 weeks of receiving your invoice to secure your spot. The lodging deposit is $100, also non-refundable.",
+        "Full payment is due June 1.",
+        "Teams that drop on or after June 1 are not eligible for any refund.",
+        "Pay by check to <strong>PNW SVC</strong> with the memo <strong>PNW SVC 2027</strong>. An official quote or invoice is available on request for school POs."
+      ]
+    },
+    {
+      "title": "On-site lodging",
+      "items": [
+        "Sleepover style, and the best team-bonding night of the summer. Teams get space in the back gym attached to the venue.",
+        "Bring air mattresses, cots and sleeping bags. Showers and bathrooms are provided."
+      ]
+    }
+  ]
+}

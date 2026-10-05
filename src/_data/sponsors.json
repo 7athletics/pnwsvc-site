@@ -1,0 +1,88 @@
+{
+  "title": {
+    "name": "",
+    "url": "",
+    "logo": "",
+    "availableText": "Title Sponsorship Available"
+  },
+  "tiers": [
+    {
+      "name": "Official Partners",
+      "blurb": "Season-long partners of the Classic.",
+      "size": "lg",
+      "sponsors": [
+        {
+          "name": "Baden Sports",
+          "url": "https://www.badensports.com",
+          "logo": "",
+          "footer": true,
+          "note": "Official Ball"
+        },
+        {
+          "name": "7 Athletics & Consulting",
+          "url": "",
+          "logo": "",
+          "footer": true,
+          "note": "Division 1 Sponsor"
+        }
+      ]
+    },
+    {
+      "name": "Division Sponsors",
+      "blurb": "Each division carries a partner's name all weekend.",
+      "size": "md",
+      "sponsors": [
+        {
+          "name": "Smash Fundraising",
+          "url": "",
+          "logo": "",
+          "footer": true,
+          "note": "Division 2 Sponsor"
+        }
+      ]
+    },
+    {
+      "name": "Event Partners",
+      "blurb": "The people who make the weekend run.",
+      "size": "sm",
+      "sponsors": [
+        {
+          "name": "VB Combines",
+          "url": "https://www.vbcombines.com",
+          "logo": "",
+          "footer": false,
+          "note": "Recruiting Combine"
+        },
+        {
+          "name": "Sporfie",
+          "url": "https://www.sporfie.com",
+          "logo": "",
+          "footer": false,
+          "note": "Livestream"
+        },
+        {
+          "name": "Quiznos",
+          "url": "https://locations.quiznos.com",
+          "logo": "",
+          "footer": false,
+          "note": "Team Meals"
+        }
+      ]
+    }
+  ],
+  "pastSponsors": [
+    "323 Sports",
+    "Powerhouse FR",
+    "Balltime",
+    "Dave C Videos & Media",
+    "Play Free Sport",
+    "Shop The Runway Boutique",
+    "Zealebrations",
+    "Sume & Co. Weddings",
+    "Great Wolf Lodge",
+    "The Crafty Teacher",
+    "Karissa Pangelina Real Estate",
+    "Aldersons Awards West",
+    "King Country"
+  ]
+}

@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: Sponsors
+permalink: /sponsors/
+description: Partners and sponsors of the PNW Summer Volleyball Classic, plus sponsorship opportunities including the title sponsorship.
+eyebrow: Sponsors
+heading: The partners behind the Classic
+lede: Our goal is to bring fun, excitement, inclusion and volleyball to our community. These partners make it happen.
+heroImage: svc-5083-wide.jpg
+heroWash: green
+heroPos: center top
+---
+{% include "partials/pagehero.njk" %}
+
+<section class="content">
+  <div class="wrap">
+    <div class="title-slot{% if sponsors.title.name %} is-filled{% endif %}" id="title">
+      <div class="rays" aria-hidden="true"></div>
+      {% if sponsors.title.name %}
+        <div>
+          <p class="eyebrow">Presenting sponsor</p>
+          <h2 class="display">The {{ site.shortName }}, presented by {{ sponsors.title.name }}</h2>
+        </div>
+        {% if sponsors.title.logo %}<img src="{{ sponsors.title.logo }}" alt="{{ sponsors.title.name }}" style="max-height:120px;width:auto">{% endif %}
+      {% else %}
+        <div>
+          <p class="eyebrow">Presented by</p>
+          <h2 class="display">{{ sponsors.title.availableText }}</h2>
+          <p class="muted" style="max-width:52ch;margin:0">Put your brand on the region's biggest summer high school tournament: two weekends of teams, families and fans, and a spot on every page of this site.</p>
+        </div>
+        <a class="btn btn-gold" href="{{ site.links.sponsorForm }}" target="_blank" rel="noopener">Inquire about title sponsorship</a>
+      {% endif %}
+    </div>
+
+    {% for t in sponsors.tiers %}
+    <section class="tier reveal">
+      <div class="tier-head"><h2>{{ t.name }}</h2><p>{{ t.blurb }}</p></div>
+      <div class="sponsor-grid {{ t.size }}">
+        {% for s in t.sponsors %}
+        {% if s.url %}<a class="sponsor" href="{{ s.url }}" target="_blank" rel="noopener">{% else %}<div class="sponsor">{% endif %}
+          {% if s.logo %}<img src="{{ s.logo }}" alt="{{ s.name }}" loading="lazy">{% else %}<span class="nm">{{ s.name }}</span>{% endif %}
+          {% if s.note %}<small>{{ s.note }}</small>{% endif %}
+        {% if s.url %}</a>{% else %}</div>{% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+
+    <div class="become reveal">
+      <div>
+        <p class="eyebrow">Become a sponsor</p>
+        <h2 class="display-sm">Reach players, families &amp; coaches across the Northwest</h2>
+        <p class="muted" style="margin:0">Packages range from event partners to division naming and the title sponsorship.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-pink" href="{{ site.links.sponsorForm }}" target="_blank" rel="noopener">Become a sponsor</a>
+        {% if site.links.sponsorPackages %}<a class="btn btn-ghost" href="{{ site.links.sponsorPackages }}" target="_blank" rel="noopener">Sponsor packages (PDF)</a>{% endif %}
+      </div>
+    </div>
+
+    {% if sponsors.pastSponsors.length %}
+    <p class="past-list" style="margin-top:34px"><strong style="color:var(--text)">Thank you to past sponsors:</strong> {{ sponsors.pastSponsors | join(" · ") }}</p>
+    {% endif %}
+  </div>
+</section>

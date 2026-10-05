@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Past Events
+permalink: /past-events/
+description: Past fields, schedules and results from the PNW Summer Volleyball Classic.
+eyebrow: Past Events
+heading: See who's come to play
+heroImage: svc-5760-wide.jpg
+heroWash: gold
+heroPos: center top
+---
+{% set lede = pastEvents.intro %}
+{% include "partials/pagehero.njk" %}
+
+<section class="content">
+  <div class="wrap">
+    <p class="muted" style="margin:0 0 22px;max-width:60ch">{{ pastEvents.allSvcIntro }}</p>
+    {% for y in pastEvents.years %}
+    <article class="year-card reveal" id="y{{ y.year }}">
+      <div>
+        <div class="yr">{{ y.year }}</div>
+        <p class="dates">{{ y.dates }}</p>
+      </div>
+      <div>
+        <p class="year-count">{{ y.totalTeams }} total teams</p>
+        <ul class="teams">{% for t in y.teams %}<li>{{ t }}</li>{% endfor %}</ul>
+        {% if y.allSvc.length %}
+        <div class="all-svc">
+          <h3>{{ y.year }} ALL-SVC Team{% if y.allSvcSponsor %}<small>presented by {{ y.allSvcSponsor }}</small>{% endif %}</h3>
+          <ul>
+            {% for a in y.allSvc %}{% if a.mvp %}<li class="mvp">{{ a.name }} <span>· {{ a.team }}</span><span class="mvp-tag">SVC MVP</span></li>{% endif %}{% endfor %}
+            {% for a in y.allSvc %}{% if not a.mvp %}<li>{{ a.name }} <span>· {{ a.team }}</span></li>{% endif %}{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% if y.resultsUrl %}<a class="btn btn-ghost" href="{{ y.resultsUrl }}" target="_blank" rel="noopener">{{ y.year }} schedule &amp; results on AES ↗</a>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+    <p class="muted" style="margin-top:24px">Want to see the matches? Past livestreams are on <a href="{{ site.links.livestream }}" target="_blank" rel="noopener">Sporfie</a>.</p>
+  </div>
+</section>

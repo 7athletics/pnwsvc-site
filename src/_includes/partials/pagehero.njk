@@ -1,0 +1,14 @@
+{# Subpage hero. Set heroImage, heroWash (pink|blue|green|gold), eyebrow, title, lede in front matter. #}
+<section class="page-hero wash-{{ heroWash or 'blue' }}{% if heroFlip %} flip{% endif %}">
+  <div class="page-hero-img" style="background-image:url('/assets/photos/{{ heroImage or 'svc-0030-wide.jpg' }}');background-position:{{ heroPos or 'center' }}"></div>
+  <div class="rays" aria-hidden="true"></div>
+  <div class="wrap page-hero-inner">
+    {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+    <h1 class="display">{{ heading or title }}</h1>
+    {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+  </div>
+  <svg class="treeline treeline-hero" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+    <path class="t1" d="{% treeline 11, 97, 26, 64, 3 %}"/>
+    <path class="t2" d="{% treeline 5, 97, 14, 40, 2.4 %}"/>
+  </svg>
+</section>

@@ -1,0 +1,22 @@
+{# Kit (kit.com) email signup. Paste your Kit form's action URL into site.json → kit.formAction
+   (looks like https://app.kit.com/forms/1234567/subscriptions). Until then the form shows a mailto fallback. #}
+<section class="signup">
+  <div class="wrap signup-inner">
+    <div>
+      <p class="eyebrow">Stay in the loop</p>
+      <h2 class="display-sm">{{ site.kit.heading }}</h2>
+      <p>{{ site.kit.text }}</p>
+    </div>
+    {% if site.kit.formAction %}
+    <form class="signup-form" action="{{ site.kit.formAction }}" method="post">
+      <label class="sr" for="kit-email">Email address</label>
+      <input id="kit-email" type="email" name="email_address" placeholder="coach@school.org" required autocomplete="email">
+      <button class="btn btn-pink" type="submit">Sign up</button>
+    </form>
+    {% else %}
+    <div class="signup-form is-pending">
+      <a class="btn btn-pink" href="mailto:{{ site.contact.email }}?subject=Add%20me%20to%20the%20PNW%20SVC%20email%20list">Email us to join the list</a>
+    </div>
+    {% endif %}
+  </div>
+</section>

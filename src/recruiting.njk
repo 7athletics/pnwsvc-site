@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+title: Recruiting
+permalink: /recruiting/
+description: Recruiting combine and recruiting seminar at the PNW Summer Volleyball Classic, open to all high school athletes.
+eyebrow: Combine + Seminar
+heading: Get in front of college coaches
+heroImage: svc-0049-wide.jpg
+heroWash: pink
+heroPos: 70% 15%
+---
+{% set lede = recruiting.intro %}
+{% include "partials/pagehero.njk" %}
+
+<section class="content">
+  <div class="wrap">
+    <div class="rec-two">
+      {% for key in ["combine", "seminar"] %}{% set r = recruiting[key] %}
+      <article class="rec-panel reveal" id="{{ key }}">
+        <p class="eyebrow">{{ r.when }}</p>
+        <h2 class="display">{{ r.title }}</h2>
+        <div class="rec-meta">
+          <span class="chip">{{ r.length }}</span>
+          {% if r.partner %}<span class="chip">Run by {{ r.partner }}</span>{% endif %}
+          <span class="chip">Open to all athletes</span>
+        </div>
+        <ul class="checks">{% for p in r.points %}<li>{{ p }}</li>{% endfor %}</ul>
+        {% if r.pricingNote %}<p class="muted" style="font-size:.92rem">{{ r.pricingNote }}</p>{% endif %}
+        {% if r.registerUrl %}
+          <a class="btn btn-pink" href="{{ r.registerUrl }}" target="_blank" rel="noopener">Register for the {{ r.title | lower }}</a>
+        {% else %}
+          <p class="status">{{ r.status }}</p>
+        {% endif %}
+        {% if r.ledBy %}<p class="led-by">{{ r.ledBy }}</p>{% endif %}
+        {% if r.panel %}
+          <p class="div-name" style="margin-top:22px">{{ r.panelLabel }}</p>
+          <ul class="panel-list">{% for m in r.panel %}<li><b>{{ m.name }}</b><span>{{ m.role }}</span></li>{% endfor %}</ul>
+        {% endif %}
+        {% if r.pastPrograms %}
+          <div class="past-panel">
+            <p class="div-name">{{ r.pastProgramsLabel }}</p>
+            <ul class="teams">{% for pp in r.pastPrograms %}<li>{{ pp }}</li>{% endfor %}</ul>
+          </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="photo-strip">
+      <div class="wash wash-blue reveal"><img src="/assets/photos/svc-1968-wide.jpg" alt="A player in black scans the court between points" loading="lazy"></div>
+      <div class="wash wash-pink reveal"><img src="/assets/photos/svc-0044.jpg" alt="A setter in pink jumps to set" loading="lazy"></div>
+      <div class="wash wash-blue reveal"><img src="/assets/photos/svc-9541.jpg" alt="Two players from opposing teams share a smile" loading="lazy"></div>
+    </div>
+
+    <h2 class="group-h" style="margin-top:60px">Combine &amp; seminar questions</h2>
+    <div class="accordion">
+      {% for g in faq.groups %}{% if loop.index == 2 %}
+        {% for i in g.items %}<details><summary>{{ i.q }}</summary><div class="body"><p>{{ i.a | safe }}</p></div></details>{% endfor %}
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>

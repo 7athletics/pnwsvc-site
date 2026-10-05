@@ -1,0 +1,155 @@
+---
+layout: layouts/base.njk
+title: Home
+description: The largest summer high school volleyball tournament in the Pacific Northwest. Two weekends in July 2027 at NW Sports Hub in Centralia, WA.
+ogImage: svc-5019-wide.jpg
+---
+{% set fs = sponsors.tiers | footerSponsors %}
+<section class="hero">
+  <div class="hero-img">
+    <img src="/assets/photos/svc-5019-wide.jpg" alt="A team in pink jerseys jumps and high-fives after winning a point at the PNW SVC" width="2400" height="1350" fetchpriority="high">
+  </div>
+  <div class="rays" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    {% if sponsors.title.name %}
+    <a class="presented is-filled" href="{{ sponsors.title.url or '/sponsors/#title' }}"><b>Presented by</b>{% if sponsors.title.logo %}<img src="{{ sponsors.title.logo }}" alt="{{ sponsors.title.name }}">{% else %}{{ sponsors.title.name }}{% endif %}</a>
+    {% else %}
+    <a class="presented" href="/sponsors/#title"><b>Presented by</b>{{ sponsors.title.availableText }}</a>
+    {% endif %}
+    <h1 class="display-lg">Success starts <span class="row2">in the summer.</span></h1>
+    <p class="lede">The Pacific Northwest's largest summer high school volleyball tournament. Four divisions, a five-match guarantee and real college exposure.</p>
+    <div class="btn-row">
+      <a class="btn btn-pink" href="{{ site.registration.url }}" target="_blank" rel="noopener">Register your team</a>
+      <a class="btn btn-ghost" href="/tournament-info/">Tournament info</a>
+    </div>
+  </div>
+  <svg class="treeline treeline-hero" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+    <path class="t1" d="{% treeline 2, 96, 30, 78, 3.2 %}"/>
+    <path class="t2" d="{% treeline 9, 97, 16, 44, 2.4 %}"/>
+  </svg>
+</section>
+
+<section class="tickets" aria-label="{{ site.year }} dates">
+  <div class="wrap tickets-grid">
+    {% for w in site.weekends %}
+    <div class="ticket">
+      <div>
+        <div class="wk">{{ w.label }}</div>
+        <div class="dt">{{ w.dates }}</div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="ticket-note"><div><b>Same event, your dates</b>Both weekends run the same format, divisions and venue.</div></div>
+  </div>
+</section>
+
+<section class="stats" aria-label="At a glance">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><div class="n">5+</div><div class="l">Matches guaranteed for every team</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Divisions, from varsity to C-team</div></div>
+      <div class="stat"><div class="n">34</div><div class="l">Teams at the 2026 Classic</div></div>
+      <div class="stat"><div class="n">{{ site.pricing.team }}</div><div class="l">Per team. On-site lodging {{ site.pricing.lodging }}</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="split-photo reveal">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="wash wash-blue"><img src="/assets/photos/svc-1331.jpg" alt="Teammates in red, white and blue laugh together between points" loading="lazy" width="1331" height="1600"></div>
+      <div class="tag">College coaches on site</div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">More than a tournament</p>
+      <h2 class="display">Get ready for fall. <span class="hl-blue">Get seen.</span></h2>
+      <p class="lede" style="color:var(--muted)">The Classic gives high school programs real competition before the season and gives athletes a real shot at college exposure.</p>
+      <div class="features">
+        <div class="feature" style="--c:var(--gold)">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <div><h3>Your level, your division</h3><p>Four divisions mean every team plays competition that fits, from top varsity down to freshman squads.</p></div>
+        </div>
+        <div class="feature" style="--c:var(--pink-text)">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+          <div><h3>Recruiting combine &amp; seminar</h3><p>Friday night before play: a livestreamed combine and a seminar led by college coaches.</p></div>
+        </div>
+        <div class="feature" style="--c:var(--blue)">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 18V8M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="2"/></svg></div>
+          <div><h3>Sleepover lodging</h3><p>Stay on site in the back gym for {{ site.pricing.lodging }} per team. Showers included, team bonding guaranteed.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section mosaic-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">This is July in Centralia</p>
+      <h2 class="display">Big swings. <span class="hl-pink">Bigger</span> celebrations.</h2>
+    </div>
+    <div class="mosaic">
+      <figure class="m1 reveal"><img src="/assets/photos/svc-3331.jpg" alt="Players in light blue and black celebrate with arms out after a point" loading="lazy" width="1600" height="1593"></figure>
+      <figure class="m2 reveal"><img src="/assets/photos/svc-3698-wide.jpg" alt="A team in pink jerseys cheers together after a point" loading="lazy" width="2400" height="1350"></figure>
+      <figure class="m3 reveal"><img src="/assets/photos/svc-9858.jpg" alt="A player in light blue shouts in celebration" loading="lazy" width="1050" height="1600"></figure>
+      <figure class="m4 reveal"><img src="/assets/photos/svc-9491.jpg" alt="Teammates in white and blue throw their arms up after a big point" loading="lazy" width="1093" height="1600"></figure>
+      <figure class="m5 reveal wash wash-pink"><img style="object-position:center 12%" src="/assets/photos/svc-4338.jpg" alt="A player in light blue laughs and pumps her fist" loading="lazy" width="1600" height="1483"></figure>
+      <figure class="m6 reveal"><img src="/assets/photos/svc-3697.jpg" alt="Players in light blue and black jump and cheer under the Gatorade banner" loading="lazy" width="1332" height="1600"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap"><div class="section-head reveal">
+    <p class="eyebrow">Who's played</p>
+    <h2 class="display-sm">Programs from across Washington &amp; Oregon</h2>
+    <p>New to the Classic? <a href="/past-events/">See past fields and results</a> to gauge the level.</p>
+  </div></div>
+  {% set programs = ["Beaverton", "Central Valley", "Lynden Christian", "Mark Morris", "North Medford", "Sherwood", "Napavine", "Weston-McEwen", "Toutle Lake", "West Valley", "Cedarcrest", "Willapa Valley", "Madras", "St. Paul", "Wilbur-Creston-Keller", "Elma", "Davenport", "Westview", "Mossyrock", "Columbia (WS)"] %}
+  <div class="marquee" aria-label="Past participating programs">
+    <div class="marquee-track">
+      {% for p in programs %}<span>{{ p }}</span>{% endfor %}
+      {% for p in programs %}<span aria-hidden="true">{{ p }}</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section recruit-band">
+  <div class="rays" aria-hidden="true"></div>
+  <div class="wrap recruit-grid">
+    <div class="reveal">
+      <p class="eyebrow">Recruiting</p>
+      <h2 class="display">Friday night is <span class="hl-gold">recruiting night.</span></h2>
+      <p class="lede" style="color:var(--muted)">Open to every athlete, even if your school isn't in the tournament.</p>
+      <div class="recruit-cards">
+        <div class="rcard"><span class="when">90 minutes · livestreamed</span><h3>Recruiting Combine</h3><p>Position and group drills with equal reps for every player, run by {{ recruiting.combine.partner }}. You keep the footage.</p></div>
+        <div class="rcard"><span class="when">After the combine</span><h3>Recruiting Seminar</h3><p>College coaches from multiple levels on what they look for, NCAA rules, scholarships and timelines.</p></div>
+      </div>
+      <a class="btn btn-gold" href="/recruiting/">Combine &amp; seminar details</a>
+    </div>
+    <div class="recruit-photo reveal">
+      <div class="wash wash-blue"><img src="/assets/photos/svc-0033.jpg" alt="A setter in maroon squares up to set the ball" loading="lazy" width="1295" height="1600"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap venue-grid">
+    <div class="venue-card reveal">
+      <p class="eyebrow">The venue</p>
+      <h2 class="display-sm">{{ site.venue.name }}</h2>
+      <address>{{ site.venue.street }}<br>{{ site.venue.city }}</address>
+      <p class="muted">Right off I-5, halfway between Seattle and Portland. Warm-ups start at 7:30am and first serve is 8:00am.</p>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="{{ site.venue.mapsUrl }}" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn-ghost" href="{{ site.links.livestream }}" target="_blank" rel="noopener">Watch the livestream</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe src="{{ site.venue.mapEmbed }}" title="Map to {{ site.venue.name }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+{% include "partials/signup.njk" %}

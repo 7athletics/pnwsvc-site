@@ -1,0 +1,19 @@
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="{{ site.name }} home">
+      <img src="/assets/img/logo-320.png" alt="" width="46" height="48">
+      <span class="brand-text"><b>PNW SVC</b><small>Summer Volleyball Classic</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        {% for item in nav %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <a class="btn btn-register" href="{{ site.registration.url }}" target="_blank" rel="noopener">Register</a>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+      <span class="sr">Menu</span><i></i><i></i><i></i>
+    </button>
+  </div>
+</header>

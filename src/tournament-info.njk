@@ -1,0 +1,101 @@
+---
+layout: layouts/base.njk
+title: Tournament Info
+permalink: /tournament-info/
+description: Dates, pricing, divisions, format and rules for the 2027 PNW Summer Volleyball Classic.
+eyebrow: 2027 Tournament Info
+heading: Everything your team needs to know
+lede: Key facts up top. Full rules below. Tap any section to open it.
+heroImage: svc-0057-wide.jpg
+heroWash: blue
+heroPos: 25% 45%
+---
+{% include "partials/pagehero.njk" %}
+
+<div class="wrap">
+  <div class="facts">
+    <div class="fact wide fact-accent" style="--c:var(--pink)">
+      <div class="k">{{ site.year }} dates · pick one</div>
+      <div class="v">{% for w in site.weekends %}<span class="c{{ loop.index }}">{{ w.short }}</span>{% if not loop.last %} &nbsp;/&nbsp; {% endif %}{% endfor %}</div>
+      <div class="s">{{ site.weekendsNote }}</div>
+    </div>
+    <div class="fact fact-accent" style="--c:var(--gold)">
+      <div class="k">Team entry</div>
+      <div class="v">{{ site.pricing.team }}</div>
+      <div class="s">{{ site.pricing.teamDeposit }} non-refundable deposit</div>
+    </div>
+    <div class="fact fact-accent" style="--c:var(--blue)">
+      <div class="k">On-site lodging</div>
+      <div class="v">{{ site.pricing.lodging }}</div>
+      <div class="s">{{ site.pricing.lodgingDeposit }} non-refundable deposit</div>
+    </div>
+    <div class="fact wide fact-accent" style="--c:var(--green)">
+      <div class="k">Venue</div>
+      <div class="v">{{ site.venue.name }}</div>
+      <div class="s">{{ site.venue.street }}, {{ site.venue.city }} · <a href="{{ site.venue.mapsUrl }}" target="_blank" rel="noopener">Directions</a></div>
+    </div>
+    <div class="fact">
+      <div class="k">Guarantee</div>
+      <div class="v">5 matches</div>
+      <div class="s">Best 2 of 3 to 25</div>
+    </div>
+    <div class="fact">
+      <div class="k">Daily start</div>
+      <div class="v">8:00am</div>
+      <div class="s">Warm-ups at 7:30am</div>
+    </div>
+    <div class="fact">
+      <div class="k">Rosters due</div>
+      <div class="v">July 1</div>
+      <div class="s">Max 14 players, 2 coaches</div>
+    </div>
+    <div class="fact">
+      <div class="k">Full payment due</div>
+      <div class="v">June 1</div>
+      <div class="s">No refunds on or after June 1</div>
+    </div>
+    <div class="fact wide">
+      <div class="k">Registration</div>
+      <div class="s" style="color:var(--text);font-size:1rem">{{ site.registration.status }}</div>
+    </div>
+  </div>
+</div>
+
+<section class="content">
+  <div class="wrap">
+    <h2 class="group-h">Divisions</h2>
+    <div class="divisions">
+      {% for d in rules.divisions %}<div class="division"><b>{{ d.name }}</b><span>{{ d.level }}</span></div>{% endfor %}
+    </div>
+
+    <div class="info-layout" style="margin-top:50px">
+      <div>
+        <div class="acc-tools">
+          <h2 class="group-h" style="margin:0">Rules &amp; policies</h2>
+          <button class="linkbtn" type="button" data-acc-all="rules-acc">Expand all</button>
+        </div>
+        <div class="accordion rules" id="rules-acc">
+          {% for s in rules.sections %}
+          <details id="{{ s.title | slugify }}"{% if loop.first %} open{% endif %}>
+            <summary><span class="acc-title">{{ s.title }}</span></summary>
+            <div class="body">
+              <ul>{% for i in s.items %}<li>{{ i | safe }}</li>{% endfor %}</ul>
+              {% if s.title == "Payment & refunds" %}
+              <p style="margin-top:12px" id="payment">Mail checks to:<br><strong>{% for l in site.payment.mailTo %}{{ l }}{% if not loop.last %}<br>{% endif %}{% endfor %}</strong></p>
+              {% endif %}
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+      <aside class="aside-card">
+        <h3>Ready to play?</h3>
+        <p class="muted">{{ site.registration.status }}</p>
+        <a class="btn btn-pink" href="{{ site.registration.url }}" target="_blank" rel="noopener">Register your team</a>
+        <a class="btn btn-ghost" href="/faq/">Read the FAQ</a>
+        <hr>
+        <p class="muted" style="margin:0">Questions? Text or call <a href="tel:{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a> or email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+      </aside>
+    </div>
+  </div>
+</section>

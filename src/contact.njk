@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+description: Contact the PNW Summer Volleyball Classic tournament directors.
+eyebrow: Contact
+heading: Talk to the directors
+lede: Questions, comments or concerns, we're here for them. Text is usually fastest.
+heroImage: svc-staff-wide.jpg
+heroWash: pink
+heroPos: center top
+---
+{% include "partials/pagehero.njk" %}
+
+<section class="content">
+  <div class="wrap">
+    <div class="contact-grid">
+      <a class="contact-card" href="sms:{{ site.contact.phoneHref }}">
+        <div class="k">{{ site.contact.phoneNote }}</div>
+        <div class="v">{{ site.contact.phone }}</div>
+        <span class="muted">Fastest way to reach us</span>
+      </a>
+      <a class="contact-card" href="mailto:{{ site.contact.email }}">
+        <div class="k">Email</div>
+        <div class="v">{{ site.contact.email }}</div>
+        <span class="muted">Invoices, quotes and POs</span>
+      </a>
+      <a class="contact-card" href="{{ site.links.instagram }}" target="_blank" rel="noopener">
+        <div class="k">Social</div>
+        <div class="v">@pnwsvc</div>
+        <span class="muted">Instagram &amp; Facebook</span>
+      </a>
+    </div>
+
+    <h2 class="group-h">Tournament directors</h2>
+    <div class="directors">
+      {% for d in directors.people %}
+      <div class="director reveal">
+        <h3>{{ d.name }}</h3>
+        <div class="role">{{ d.role }}</div>
+        <p>{{ d.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include "partials/signup.njk" %}

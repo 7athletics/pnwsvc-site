@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and title != "Home" %}{{ title }} · {% endif %}{{ site.shortName }} {{ site.year }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <meta name="theme-color" content="#08221c">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <meta property="og:title" content="{{ title or site.name }} · {{ site.shortName }} {{ site.year }}">
+  <meta property="og:description" content="{{ description or site.tagline }}">
+  <meta property="og:image" content="{{ site.url }}/assets/photos/{{ ogImage or 'svc-0036-wide.jpg' }}">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="/assets/fonts/norwester-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SportsEvent","name":"{{ site.name }} {{ site.year }}","sport":"Volleyball","startDate":"2027-07-10","endDate":"2027-07-18","location":{"@type":"Place","name":"{{ site.venue.name }}","address":"{{ site.venue.street }}, {{ site.venue.city }}"},"url":"{{ site.url }}"}
+  </script>
+</head>
+<body class="page-{{ page.fileSlug or 'home' }}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[
+  { "label": "Home", "url": "/" },
+  { "label": "Tournament Info", "url": "/tournament-info/" },
+  { "label": "Recruiting", "url": "/recruiting/" },
+  { "label": "Past Events", "url": "/past-events/" },
+  { "label": "Sponsors", "url": "/sponsors/" },
+  { "label": "FAQ", "url": "/faq/" },
+  { "label": "Contact", "url": "/contact/" }
+]

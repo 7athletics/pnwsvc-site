@@ -1,0 +1,289 @@
+{
+  "intro": "New to the Classic? Here's who has come to play. Full pools, brackets and results for each year are on AES.",
+  "allSvcIntro": "The ALL-SVC team honors the standout players of each Classic. It started in 2023.",
+  "years": [
+    {
+      "year": 2026,
+      "dates": "July 11–12, 2026",
+      "resultsUrl": "https://results.advancedeventsystems.com/event/UE5XX1NWQ18yMDI20/home",
+      "totalTeams": 34,
+      "teams": [
+        "Beaverton (V & JV)",
+        "Black Hills",
+        "Bremerton",
+        "CCVC (Blue & White)",
+        "Central Valley",
+        "Columbia (WS)",
+        "Davenport",
+        "Elma",
+        "Lynden Christian (2 teams)",
+        "Madras",
+        "Mark Morris",
+        "Mossyrock",
+        "Napavine (3 teams)",
+        "North Medford",
+        "Northwest Christian",
+        "Olympic",
+        "Sherwood (V & JV)",
+        "St. Paul",
+        "Taholah",
+        "Toutle Lake (V & JV)",
+        "West Valley",
+        "Weston-McEwen",
+        "Westview",
+        "Wilbur-Creston-Keller",
+        "Willapa Valley",
+        "WWVC (2 teams)"
+      ],
+      "allSvcSponsor": "",
+      "allSvc": [
+        {
+          "name": "Joella Posini",
+          "team": "Columbia",
+          "mvp": false
+        },
+        {
+          "name": "Alexis Gunter",
+          "team": "Mark Morris",
+          "mvp": false
+        },
+        {
+          "name": "Jocelyn Eshuis",
+          "team": "Lynden Christian",
+          "mvp": false
+        },
+        {
+          "name": "Azielia Jimenez",
+          "team": "Sherwood",
+          "mvp": false
+        },
+        {
+          "name": "Kaelyn Borlaug",
+          "team": "Westview",
+          "mvp": false
+        },
+        {
+          "name": "Molly Scout Weston",
+          "team": "Sherwood",
+          "mvp": false
+        },
+        {
+          "name": "Remmi Day",
+          "team": "Central Valley",
+          "mvp": true
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "dates": "July 12–13, 2025",
+      "resultsUrl": "https://results.advancedeventsystems.com/event/MjAyNV9QTldfU3VtbWVyX1ZvbGxleWJhbGxfQ2xhc3NpYw2/home",
+      "totalTeams": 33,
+      "teams": [
+        "Beaverton (V & JV)",
+        "CCVC (3 teams)",
+        "Cedarcrest (V & JV)",
+        "Central Valley",
+        "Davenport",
+        "Elma",
+        "Mark Morris",
+        "MWP",
+        "Napavine (3 teams)",
+        "North Medford",
+        "Sheridan",
+        "Sherwood (V & JV)",
+        "St. Paul",
+        "Taholah",
+        "Tenino",
+        "Toledo",
+        "Tonasket",
+        "Toutle Lake (V & JV)",
+        "West Valley (Spokane)",
+        "West Valley (Yakima)",
+        "Weston-McEwen",
+        "Wilbur-Creston",
+        "Willapa Valley (V & JV)",
+        "WWVC"
+      ],
+      "allSvcSponsor": "",
+      "allSvc": [
+        {
+          "name": "Alexa Doll",
+          "team": "WV Yakima",
+          "mvp": false
+        },
+        {
+          "name": "Kristen Leaverton",
+          "team": "WV Yakima",
+          "mvp": false
+        },
+        {
+          "name": "Naomi Rainwater",
+          "team": "Davenport",
+          "mvp": false
+        },
+        {
+          "name": "Kiley Harris",
+          "team": "WV Yakima",
+          "mvp": false
+        },
+        {
+          "name": "Mya Simon",
+          "team": "CCVC - Gerard",
+          "mvp": false
+        },
+        {
+          "name": "Lineea Vargason",
+          "team": "Sherwood",
+          "mvp": false
+        },
+        {
+          "name": "Kristina Atonio",
+          "team": "North Medford",
+          "mvp": true
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "dates": "July 13–14, 2024",
+      "resultsUrl": "https://results.advancedeventsystems.com/event/MjAyNF9QTldfU3VtbWVyX1ZvbGxleWJhbGxfQ2xhc3NpYw2/home",
+      "totalTeams": 25,
+      "teams": [
+        "West Valley Spokane",
+        "Mark Morris",
+        "Stevenson",
+        "Sherwood",
+        "Adna",
+        "GPEVC Black",
+        "Tigard",
+        "Colfax",
+        "Onalaska",
+        "St. Paul",
+        "GPEVC Gold",
+        "Mossyrock",
+        "Tenino",
+        "Toutle Varsity",
+        "Sheridan",
+        "GPEVC White",
+        "Napavine Varsity",
+        "Toledo",
+        "Toutle JV",
+        "Taholah",
+        "Willapa Valley",
+        "GPEVC Silver",
+        "Lyle/Wishram",
+        "Adna JV",
+        "Napavine JV"
+      ],
+      "allSvcSponsor": "Good Game",
+      "allSvc": [
+        {
+          "name": "Gaby Guard",
+          "team": "Adna",
+          "mvp": false
+        },
+        {
+          "name": "Ava Swan",
+          "team": "Colfax",
+          "mvp": false
+        },
+        {
+          "name": "Katie Spradley",
+          "team": "GPEVC",
+          "mvp": false
+        },
+        {
+          "name": "Taylor Givens",
+          "team": "Sheridan",
+          "mvp": false
+        },
+        {
+          "name": "Audra Rose",
+          "team": "St. Paul",
+          "mvp": false
+        },
+        {
+          "name": "Samia Rudd",
+          "team": "Stevenson",
+          "mvp": false
+        },
+        {
+          "name": "Ellie Falon",
+          "team": "Toledo",
+          "mvp": false
+        },
+        {
+          "name": "Kendall Humphrey",
+          "team": "Adna",
+          "mvp": true
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "dates": "July 15–16, 2023",
+      "resultsUrl": "",
+      "totalTeams": 19,
+      "teams": [
+        "Napavine V",
+        "Tenino",
+        "Mark Morris",
+        "RSB",
+        "Colfax",
+        "Toutle Lake",
+        "St. Paul",
+        "Cascade Christian",
+        "Crescent Valley",
+        "Adna",
+        "La Salle",
+        "Stevenson",
+        "Toledo",
+        "Newport",
+        "La Pine",
+        "Napavine C",
+        "Lyle",
+        "Napavine JV",
+        "Winlock"
+      ],
+      "allSvcSponsor": "",
+      "allSvc": [
+        {
+          "name": "Daniele Street",
+          "team": "Crescent Valley",
+          "mvp": false
+        },
+        {
+          "name": "Vivian Buford",
+          "team": "Crescent Valley",
+          "mvp": false
+        },
+        {
+          "name": "Kendall Humphrey",
+          "team": "Adna",
+          "mvp": false
+        },
+        {
+          "name": "Karsyn Freeman",
+          "team": "Adna",
+          "mvp": false
+        },
+        {
+          "name": "Ali Millspaugh",
+          "team": "Mark Morris",
+          "mvp": false
+        },
+        {
+          "name": "Molly Griffin",
+          "team": "Cascade Christian",
+          "mvp": false
+        },
+        {
+          "name": "Poppy Freeman",
+          "team": "Cascade Christian",
+          "mvp": false
+        }
+      ]
+    }
+  ]
+}

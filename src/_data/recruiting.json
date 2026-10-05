@@ -1,0 +1,59 @@
+{
+  "intro": "College exposure is built into the weekend. Friday night before play, athletes can do a recruiting combine and a recruiting seminar, and college coaches follow the action in person and on the livestream.",
+  "combine": {
+    "title": "Recruiting Combine",
+    "when": "Friday evening before tournament play",
+    "length": "90 minutes",
+    "partner": "Championship Combines",
+    "points": [
+      "Position drills, then group drills, built for maximum touches",
+      "Every player gets equal reps, with no favoritism by club or school",
+      "Livestreamed to college coaches who can't attend in person",
+      "Players get the footage afterward for their own recruiting",
+      "Open to athletes whose school isn't in the tournament"
+    ],
+    "registerUrl": "",
+    "status": "2027 combine registration opens in the spring."
+  },
+  "seminar": {
+    "title": "Recruiting Seminar",
+    "when": "Friday evening, after the combine",
+    "length": "About 90 minutes, with open Q&A",
+    "points": [
+      "College coaches from multiple levels share what they look for",
+      "Recruiting profiles, highlight videos, social media and building exposure",
+      "NCAA rules, scholarship basics, and where to be by grade",
+      "For athletes, parents and high school coaches"
+    ],
+    "pricingNote": "2026 pricing: $20 single pre-sale, $175 team pre-sale, $30 at the door. Every attendee needs a ticket, including parents, coaches and siblings.",
+    "registerUrl": "",
+    "status": "2027 seminar tickets go on sale in the spring.",
+    "panel": [
+      {
+        "name": "CJ Roberts",
+        "role": "Founder, 7 Athletics & Consulting"
+      },
+      {
+        "name": "Diana Villalpando",
+        "role": "Assistant Coach, Portland State University"
+      },
+      {
+        "name": "Ceanna Michalek",
+        "role": "Head Coach, Centralia College"
+      }
+    ],
+    "panelLabel": "2026 Panel",
+    "ledBy": "Led by CJ Roberts, founder of 7 Athletics & Consulting, former college coach and current college program consultant.",
+    "pastProgramsLabel": "Past panelists have come from",
+    "pastPrograms": [
+      "Portland State University",
+      "Central Washington University",
+      "Southern Oregon University",
+      "Saint Martin's University",
+      "Centralia College",
+      "Umpqua Community College",
+      "Dallas Christian College",
+      "MadFrog Volleyball Club"
+    ]
+  }
+}
