@@ -103,12 +103,12 @@ ogImage: svc-5019-wide.jpg
 <section class="section" style="padding-top:0">
   <div class="wrap"><div class="section-head reveal">
     <p class="eyebrow">Who's played</p>
-    <h2 class="display-sm">Programs from across Washington &amp; Oregon</h2>
-    <p>New to the Classic? <a href="/past-events/">See past fields and results</a> to gauge the level.</p>
+    {% set programs = pastEvents.years | allSchools %}
+    <h2 class="display-sm">{{ programs.length }} programs and counting</h2>
+    <p>Teams from across Washington and Oregon, plus athletes from Idaho, California and Las Vegas. New to the Classic? <a href="/past-events/">See past fields and results</a> to gauge the level.</p>
   </div></div>
-  {% set programs = ["Beaverton", "Central Valley", "Lynden Christian", "Mark Morris", "North Medford", "Sherwood", "Napavine", "Weston-McEwen", "Toutle Lake", "West Valley", "Cedarcrest", "Willapa Valley", "Madras", "St. Paul", "Wilbur-Creston-Keller", "Elma", "Davenport", "Westview", "Mossyrock", "Columbia (WS)"] %}
   <div class="marquee" aria-label="Past participating programs">
-    <div class="marquee-track">
+    <div class="marquee-track" style="animation-duration: {{ programs.length * 3 }}s">
       {% for p in programs %}<span>{{ p }}</span>{% endfor %}
       {% for p in programs %}<span aria-hidden="true">{{ p }}</span>{% endfor %}
     </div>
