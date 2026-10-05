@@ -1,0 +1,242 @@
+# Pages CMS (https://pagescms.org): log in with GitHub, open this repo, edit content in forms.
+# Every save commits to GitHub and Netlify/Cloudflare rebuilds the site automatically.
+media:
+  input: src/assets/photos
+  output: /assets/photos
+
+content:
+  - name: site
+    label: Event settings (dates, prices, links)
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: year, label: Event year, type: number }
+      - { name: tagline, label: Tagline, type: string }
+      - name: weekends
+        label: Weekends
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: dates, label: Full dates (e.g. July 10–11, 2027), type: string }
+          - { name: short, label: Short dates (e.g. Jul 10–11), type: string }
+      - { name: weekendsNote, label: Weekends note, type: text }
+      - name: pricing
+        label: Pricing
+        type: object
+        fields:
+          - { name: team, label: Team entry, type: string }
+          - { name: lodging, label: On-site lodging, type: string }
+          - { name: teamDeposit, label: Team deposit, type: string }
+          - { name: lodgingDeposit, label: Lodging deposit, type: string }
+      - name: registration
+        label: Registration
+        type: object
+        fields:
+          - { name: url, label: Register button link, type: string }
+          - { name: status, label: Registration status text, type: text }
+      - name: links
+        label: Links
+        type: object
+        fields:
+          - { name: schedules, label: Current schedules (AES), type: string }
+          - { name: schedulesLabel, label: Schedules link label, type: string }
+          - { name: livestream, label: Livestream, type: string }
+          - { name: instagram, label: Instagram, type: string }
+          - { name: facebook, label: Facebook, type: string }
+          - { name: sponsorForm, label: Become-a-sponsor form, type: string }
+          - { name: sponsorPackages, label: Sponsor packages PDF (optional), type: string }
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone (display), type: string }
+          - { name: phoneHref, label: Phone (digits, e.g. +19712773994), type: string }
+          - { name: phoneNote, label: Phone note, type: string }
+      - name: payment
+        label: Check payments
+        type: object
+        fields:
+          - { name: payableTo, label: Payable to, type: string }
+          - { name: memo, label: Memo, type: string }
+          - { name: mailTo, label: Mailing address lines, type: string, list: true }
+      - name: kit
+        label: Kit email signup
+        type: object
+        fields:
+          - { name: formAction, label: Kit form action URL (blank = email fallback), type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - name: venue
+        label: Venue
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: street, label: Street, type: string }
+          - { name: city, label: City/State/ZIP, type: string }
+          - { name: mapsUrl, label: Google Maps link, type: string }
+          - { name: mapEmbed, label: Map embed URL, type: string }
+
+  - name: sponsors
+    label: Sponsors
+    type: file
+    path: src/_data/sponsors.json
+    format: json
+    fields:
+      - name: title
+        label: Title ("Presented by") sponsor
+        type: object
+        fields:
+          - { name: name, label: Sponsor name (leave blank to show "available"), type: string }
+          - { name: url, label: Website, type: string }
+          - { name: logo, label: Logo, type: image }
+          - { name: availableText, label: Text when available, type: string }
+      - name: tiers
+        label: Tiers
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Tier name, type: string }
+          - { name: blurb, label: Tier blurb, type: string }
+          - name: size
+            label: Card size
+            type: select
+            options: { values: [lg, md, sm] }
+          - name: sponsors
+            label: Sponsors
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: url, label: Website, type: string }
+              - { name: logo, label: Logo (PNG/SVG, transparent), type: image }
+              - { name: note, label: Label (e.g. Official Ball), type: string }
+              - { name: footer, label: Show in every page footer, type: boolean }
+      - { name: pastSponsors, label: Past sponsors, type: string, list: true }
+
+  - name: rules
+    label: Tournament rules
+    type: file
+    path: src/_data/rules.json
+    format: json
+    fields:
+      - name: divisions
+        label: Divisions
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: level, label: Level, type: string }
+      - name: sections
+        label: Rule sections
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Section title, type: string }
+          - { name: items, label: Rules (basic HTML allowed), type: text, list: true }
+
+  - name: faq
+    label: FAQ
+    type: file
+    path: src/_data/faq.json
+    format: json
+    fields:
+      - name: groups
+        label: Groups
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Group name, type: string }
+          - name: items
+            label: Questions
+            type: object
+            list: true
+            fields:
+              - { name: q, label: Question, type: string }
+              - { name: a, label: Answer (basic HTML allowed), type: text }
+
+  - name: recruiting
+    label: Recruiting (combine & seminar)
+    type: file
+    path: src/_data/recruiting.json
+    format: json
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - name: combine
+        label: Combine
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: when, label: When, type: string }
+          - { name: length, label: Length, type: string }
+          - { name: partner, label: Run by, type: string }
+          - { name: points, label: Bullet points, type: string, list: true }
+          - { name: registerUrl, label: Registration link (blank = show status), type: string }
+          - { name: status, label: Status text, type: string }
+      - name: seminar
+        label: Seminar
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: when, label: When, type: string }
+          - { name: length, label: Length, type: string }
+          - { name: points, label: Bullet points, type: string, list: true }
+          - { name: pricingNote, label: Pricing note, type: text }
+          - { name: registerUrl, label: Registration link (blank = show status), type: string }
+          - { name: status, label: Status text, type: string }
+          - { name: ledBy, label: Led by (text), type: text }
+          - { name: panelLabel, label: Panel heading, type: string }
+          - { name: pastProgramsLabel, label: Past programs heading, type: string }
+          - { name: pastPrograms, label: Past panelist programs, type: string, list: true }
+          - name: panel
+            label: Panel
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: role, label: Role, type: string }
+
+  - name: pastEvents
+    label: Past events
+    type: file
+    path: src/_data/pastEvents.json
+    format: json
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - { name: allSvcIntro, label: ALL-SVC intro, type: text }
+      - name: years
+        label: Years (newest first)
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: number }
+          - { name: dates, label: Dates, type: string }
+          - { name: totalTeams, label: Total teams, type: number }
+          - { name: resultsUrl, label: AES results link, type: string }
+          - { name: teams, label: Teams, type: string, list: true }
+          - { name: allSvcSponsor, label: ALL-SVC presented by (optional), type: string }
+          - name: allSvc
+            label: ALL-SVC team
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Player, type: string }
+              - { name: team, label: Team, type: string }
+              - { name: mvp, label: SVC MVP, type: boolean }
+
+  - name: directors
+    label: Tournament directors
+    type: file
+    path: src/_data/directors.json
+    format: json
+    fields:
+      - name: people
+        label: Directors
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: bio, label: Bio, type: text }
