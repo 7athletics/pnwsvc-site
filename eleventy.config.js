@@ -33,6 +33,32 @@ export default function (eleventyConfig) {
     tiers.flatMap((t) => t.sponsors).filter((s) => s.footer)
   );
 
+
+  // Every school that has played, pulled from the Past Events team lists (so new years
+  // added in Pages CMS show up automatically). Strips "(V & JV)", "(2 teams)", "Varsity", etc.
+  const SCHOOL_ALIASES = {
+    "toutle": "Toutle Lake", "lyle": "Lyle-Wishram", "lyle/wishram": "Lyle-Wishram",
+    "wilbur-creston": "Wilbur-Creston-Keller", "west valley spokane": "West Valley (Spokane)",
+    "west valley yakima": "West Valley (Yakima)", "gpevc": "GPEVC",
+  };
+  eleventyConfig.addFilter("allSchools", (years) => {
+    const seen = new Map();
+    for (const y of years || []) for (const raw of y.teams || []) {
+      let n = String(raw).trim()
+        .replace(/\s*\((?:V\s*&\s*JV|\d+\s*teams?|Blue\s*&\s*White)\)\s*$/i, "")
+        .replace(/\s+(?:Varsity|JV|V|C|Black|Gold|White|Silver)$/i, "")
+        .replace(/\s+(?:Varsity|JV|V|C)$/i, "").trim();
+      const key = n.toLowerCase();
+      n = SCHOOL_ALIASES[key] || n;
+      const k2 = n.toLowerCase();
+      if (!seen.has(k2)) seen.set(k2, n);
+    }
+    // a bare name (e.g. "West Valley") is dropped when a more specific version exists
+    const names = [...seen.values()];
+    return names.filter((n) => !names.some((o) => o !== n && o.startsWith(n + " (")))
+      .sort((a, b) => a.localeCompare(b));
+  });
+
   // PREVIEW=1 builds a copy with relative links so it opens by double-clicking index.html.
   if (process.env.PREVIEW) {
     eleventyConfig.addTransform("relative-links", function (content) {
