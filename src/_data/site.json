@@ -1,12 +1,17 @@
 {
-  "name": "Pacific Northwest Summer Volleyball Classic",
-  "shortName": "PNW SVC",
-  "tagline": "The largest summer high school volleyball tournament in the Pacific Northwest.",
-  "url": "https://www.pnwsvc.org",
   "year": 2027,
+  "tagline": "The largest summer high school volleyball tournament in the Pacific Northwest.",
   "weekends": [
-    { "label": "Weekend 1", "dates": "July 10–11, 2027", "short": "July 10–11" },
-    { "label": "Weekend 2", "dates": "July 17–18, 2027", "short": "July 17–18" }
+    {
+      "label": "Weekend 1",
+      "dates": "July 10–11, 2027",
+      "short": "July 10–11"
+    },
+    {
+      "label": "Weekend 2",
+      "dates": "July 17–18, 2027",
+      "short": "July 17–18"
+    }
   ],
   "weekendsNote": "Both weekends are the same event: same format, divisions and venue. Pick the dates that work for your team.",
   "pricing": {
@@ -15,16 +20,9 @@
     "teamDeposit": "$150",
     "lodgingDeposit": "$100"
   },
-  "venue": {
-    "name": "NW Sports Hub",
-    "street": "701 Allen Ave",
-    "city": "Centralia, WA 98531",
-    "mapsUrl": "https://maps.google.com/?q=NW+Sports+Hub,+701+Allen+Ave,+Centralia,+WA+98531",
-    "mapEmbed": "https://maps.google.com/maps?q=NW%20Sports%20Hub%2C%20701%20Allen%20Ave%2C%20Centralia%2C%20WA%2098531&z=14&output=embed"
-  },
   "registration": {
     "url": "https://forms.gle/1yyhmccsAYyCbBXF7",
-    "status": "Registration opens March 1, 2027. Teams that advanced to state get an early registration window starting in December."
+    "status": "Registration opens in the fall for high school teams and in the winter for club teams. State placing teams that register get entered in a drawing for a grand prize!"
   },
   "links": {
     "schedules": "https://results.advancedeventsystems.com/event/UE5XX1NWQ18yMDI20/home",
@@ -32,8 +30,7 @@
     "livestream": "https://www.sporfie.com/pnwsvc",
     "instagram": "https://www.instagram.com/pnwsvc",
     "facebook": "https://www.facebook.com/pnwsvc",
-    "sponsorForm": "https://forms.gle/iX6eFKXMpHE7bgLY9",
-    "sponsorPackages": ""
+    "sponsorForm": "https://forms.gle/iX6eFKXMpHE7bgLY9"
   },
   "contact": {
     "email": "pnwsvc@gmail.com",
@@ -44,11 +41,22 @@
   "payment": {
     "payableTo": "PNW SVC",
     "memo": "PNW SVC 2027",
-    "mailTo": ["PNW SVC", "Attn: Monica Dailey", "1014 NW State Ave", "Chehalis, WA 98532"]
+    "mailTo": [
+      "PNW SVC",
+      "Attn: Monica Dailey",
+      "1014 NW State Ave",
+      "Chehalis, WA 98532"
+    ]
   },
   "kit": {
-    "formAction": "",
     "heading": "Get tournament updates",
     "text": "Registration dates, schedule releases and recruiting news. A couple of emails a month at most."
+  },
+  "venue": {
+    "name": "NW Sports Hub",
+    "street": "701 Allen Ave",
+    "city": "Centralia, WA 98531",
+    "mapsUrl": "https://maps.google.com/?q=NW+Sports+Hub,+701+Allen+Ave,+Centralia,+WA+98531",
+    "mapEmbed": "https://maps.google.com/maps?q=NW%20Sports%20Hub%2C%20701%20Allen%20Ave%2C%20Centralia%2C%20WA%2098531&z=14&output=embed"
   }
 }
